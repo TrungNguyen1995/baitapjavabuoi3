@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class baitapjavabuoi3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+////        bài tập tính tong tất cả số nguyên 0 -> n
+//
+        System.out.println("Moi ban nhap gia tri n:");
+        int n = Integer.parseInt(scanner.nextLine());
+        int sum = 0;
+        for (int i=1; i<=n; i++ ){
+            sum +=i;
+        }
+        System.out.println(sum);
+
+//        Bài tập tính tích 0 -> n
+        System.out.println("Enter m: ");
+        int m = Integer.parseInt(scanner.nextLine());
+        int product = 1;
+        for (int k=1; k<=m; k++){
+            product *=k;
+        }
+        System.out.println("Tích từ 0 -> n là:"+product);
+//
+//        Bai tap cho phep nhap so nguyen duong n, tinh tong tat ca so chan trong khoang 0 - n
+        System.out.println("Mời bạn nhập giá trị n:");
+        int n = Integer.parseInt(scanner.nextLine());
+        int sum =0;
+        for (int i=0; i<=n; i++ ){
+            if (i%2==0)
+                sum +=i;
+        }
+        System.out.println("Tổng các số nguyên dương chăn từ 0 -> n là: "+sum);
+
+
+//        Bai tap su dung phep lap white tinh tong cac so chan trong khoang 0 -> n
+        System.out.println("Moi ban nhap vao so nguyen duong n");
+        int n = Integer.parseInt(scanner.nextLine());
+        int sum =0;
+        while (0<=n && n%2==0){
+            sum+=n;
+            System.out.println("Tong cac so chan la; "+sum);
+        }
+
+//        Bai tap su dung phep lap Do - White de tinh tong cac so chan trong khoang 0 -> n
+        System.out.println("Moi ban nhap vao so nguyen duong n");
+        int n = Integer.parseInt(scanner.nextLine());
+        int sum = 0;
+        do{
+            sum +=n;
+            n++;
+        } while (n>=0 || n%2==0);
+            System.out.println("tong cac so chan la: "+sum);
+    }
+}
